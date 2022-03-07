@@ -1,4 +1,5 @@
-# discord ta dafapratama
-<br>discord akuisisi
-copyright @dafapratama 
-buat upload semua sumber pendukung ta 
+## AKUISISI DISCORD
+REPOSITORY INI BERSIFAT PUBLIC DAN COPYRIGHT @dafapratama
+
+### SUMBER PENDUKUNG DAN CODE PEMILIK
+UNTUK MENDUKUNG KEGIATAN TA PEMILIK REPOSITORY
