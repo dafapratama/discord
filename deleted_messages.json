@@ -1,0 +1,45 @@
+{
+    "id": 942945693646090270,
+    "category": {
+        "id": 931150117459853343,
+        "name": "Text Channels"
+    },
+    "guild": "akuisisi",
+    "name": "test",
+    "created_at": "2022/02/15, 00:49:32",
+    "messages": [
+        {
+            "activity": null,
+            "application": null,
+            "attachments": [],
+            "author": {
+                "id": 929638821790904331,
+                "name": "simpleman",
+                "discriminator": "4109"
+            },
+            "call": null,
+            "clean_content": "coba",
+            "content": "coba",
+            "created_at": "2022/02/21, 07:43:16",
+            "content_before_edited": null,
+            "edited_at": null,
+            "embeds": [],
+            "id": 945224140275720212,
+            "jump_url": "https://discord.com/channels/931150117459853342/942945693646090270/945224140275720212",
+            "mention_everyone": false,
+            "mentions": [],
+            "nonce": "945224135515045888",
+            "pinned": false,
+            "raw_channel_mentions": [],
+            "raw_mentions": [],
+            "raw_role_mentions": [],
+            "reactions": [],
+            "reference": null,
+            "role_mentions": [],
+            "stickers": [],
+            "system_content": "coba",
+            "tts": false,
+            "webhook_id": null
+        }
+    ]
+}

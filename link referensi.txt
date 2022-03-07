@@ -1,0 +1,3 @@
+https://discord.api.stdlib.com/guilds@0.2.2/channels/create/
+https://autocode.com/lib/discord/guilds/#create
+https://discord.com/developers/docs
