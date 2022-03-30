@@ -20,6 +20,7 @@ client = discord.Client()
 msg_after = None
 msg_before = None
 msg_deleted = []
+msg_deleted2 = []
 attachments_deleted = []
 msg_latest = None
 log_channel = None
@@ -334,6 +335,7 @@ def to_dataframe(msg):
 async def on_message(message):
     global msg_before
     global msg_deleted
+    global msg_deleted2
     global msg_latest
     global current_msg_id
     global log_channel
@@ -423,7 +425,8 @@ async def on_message(message):
                 tmp2 = to_dataframe(msg)
                 list_msg2.append(tmp2)
             
-            for msg in msg_deleted:
+            for msg in msg_deleted2:
+                print(type(msg))
                 tmp3 = to_dataframe(msg)
                 list_msg_del .append(tmp3)
             
@@ -501,6 +504,7 @@ async def on_message_edit(message_before, message_after):
 @client.event
 async def on_message_delete(message):
     global msg_deleted
+    global msg_deleted2
     global attachments_deleted
 
     guild = discord.utils.get(client.guilds, name=GUILD)
@@ -514,7 +518,29 @@ async def on_message_delete(message):
     log_channel = discord.utils.get(guild.channels, name="log")
     await log_channel.send(embed=embed_card(event="Deleted Message",msg=message, color=discord.Color.red()))
     msg_deleted.append(temp)
+    msg_deleted2.append(message)
     print(temp)
+
+# @client.event
+# async def start_record(ctx):
+#     await ctx.author.voice.channel.connect() # Connect to the voice channel of the author
+#     ctx.voice_client.start_recording(discord.sinks.MP3Sink(), finished_callback, ctx) # Start the recording
+#     await ctx.respond("Recording...") 
+
+# async def finished_callback(sink, ctx):
+#     # Here you can access the recorded files:
+#     recorded_users = [
+#         f"<@{user_id}>"
+#         for user_id, audio in sink.audio_data.items()
+#     ]
+#     files = [discord.File(audio.file, f"{user_id}.{sink.encoding}") for user_id, audio in sink.audio_data.items()]
+#     await ctx.channel.send(f"Finished! Recorded audio for {', '.join(recorded_users)}.", files=files) 
+
+# @client.event
+# async def stop_recording(ctx):
+#     ctx.voice_client.stop_recording() # Stop the recording, finished_callback will shortly after be called
+#     await ctx.respond("Stopped!")
+
 
 
 client.run(TOKEN)
